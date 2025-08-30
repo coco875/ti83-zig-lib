@@ -41,22 +41,20 @@ void boot_NewLine(void);
 /**
  * Resets the OS homescreen; accounts for split screen.
  */
-#define os_ClrHome() \
-do { \
-    os_ClrLCD(); \
-    os_HomeUp(); \
-    os_DrawStatusBar(); \
-} while (0)
+static inline void os_ClrHome(void) {
+    os_ClrLCD();
+    os_HomeUp();
+    os_DrawStatusBar();
+}
 
 /**
  * Resets the OS homescreen fully; ignores split screen mode.
  */
-#define os_ClrHomeFull() \
-do { \
-    os_ClrLCDFull(); \
-    os_HomeUp(); \
-    os_DrawStatusBar(); \
-} while (0)
+static inline void os_ClrHomeFull(void) {
+    os_ClrLCDFull();
+    os_HomeUp();
+    os_DrawStatusBar();
+}
 
 /**
  * Inserts a new line at the current cursor posistion on the homescreen.

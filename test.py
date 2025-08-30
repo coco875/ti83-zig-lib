@@ -12,7 +12,7 @@ def cleanup_output_directory():
 def convert_to_zig(filename) -> bool:
     output = os.path.join(out_dir, os.path.basename(filename) + ".zig")
     os.makedirs(os.path.dirname(output), exist_ok=True)
-    cmd = ["zig", "translate-c", filename, "-Iinclude"]
+    cmd = ["zig", "translate-c", filename, "-Iinclude", "-target", "avr-freestanding-eabi"]
     p = subprocess.run(cmd, stdout=subprocess.PIPE)
     if p.returncode != 0:
         return False
