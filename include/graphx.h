@@ -41,6 +41,7 @@
 #ifndef GRAPHX_H
 #define GRAPHX_H
 
+#include "int24.h"
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdbool.h>

@@ -11,6 +11,7 @@
 #ifndef TI_GRAPH_H
 #define TI_GRAPH_H
 
+#include <int24.h>
 #include <stdint.h>
 #include <ti/real.h>
 

@@ -10,6 +10,7 @@
 #ifndef TI_SCREEN_H
 #define TI_SCREEN_H
 
+#include <int24.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <stddef.h>

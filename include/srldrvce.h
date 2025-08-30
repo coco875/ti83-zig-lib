@@ -11,6 +11,7 @@
 #ifndef H_SRLDRVCE
 #define H_SRLDRVCE
 
+#include "int24.h"
 #include <stdint.h>
 #include <stdbool.h>
 #include <usbdrvce.h>

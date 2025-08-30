@@ -17,6 +17,7 @@
 #ifndef H_USBDRVCE
 #define H_USBDRVCE
 
+#include "int24.h"
 #include <stddef.h>
 #include <stdint.h>
 

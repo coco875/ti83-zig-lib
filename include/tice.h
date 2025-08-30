@@ -9,6 +9,7 @@
 #ifndef TICE_H
 #define TICE_H
 
+#include "int24.h"
 #include <sys/basicusb.h>
 #include <sys/lcd.h>
 #include <sys/power.h>

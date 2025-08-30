@@ -9,6 +9,7 @@
 #ifndef TI_PYTHON_H
 #define TI_PYTHON_H
 
+#include <int24.h>
 #include <stdint.h>
 
 #ifdef __cplusplus

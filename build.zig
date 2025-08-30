@@ -5,9 +5,4 @@ const std = @import("std");
 // runner.
 pub fn build(b: *std.Build) void {
     _ = b;
-    // const lib = b.addLibrary(.{
-    //     .name = "ti83-lib",
-    //     .root_module =
-    // });
-    // lib.addIncludePath(.{ .path = "src" });
 }

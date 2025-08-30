@@ -8,6 +8,7 @@
 #ifndef _FONTLIBC_H
 #define _FONTLIBC_H
 
+#include "int24.h"
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>

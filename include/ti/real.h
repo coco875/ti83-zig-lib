@@ -9,6 +9,7 @@
 #ifndef TI_REAL_H
 #define TI_REAL_H
 
+#include <int24.h>
 #include <stdint.h>
 
 #ifdef __cplusplus
