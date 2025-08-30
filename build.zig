@@ -4,8 +4,10 @@ const std = @import("std");
 // declaratively construct a build graph that will be executed by an external
 // runner.
 pub fn build(b: *std.Build) void {
-    const lib = b.addLibrary(.{
-        .name = "ti83-lib",
-    });
-    lib.addIncludePath(.{ .path = "src" });
+    _ = b;
+    // const lib = b.addLibrary(.{
+    //     .name = "ti83-lib",
+    //     .root_module =
+    // });
+    // lib.addIncludePath(.{ .path = "src" });
 }
