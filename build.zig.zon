@@ -76,8 +76,6 @@
     // the build root itself.
     // A directory listed here means that all files within, recursively, are included.
     .paths = .{
-        "build.zig",
-        "build.zig.zon",
         "include",
         // For example...
         //"LICENSE",
