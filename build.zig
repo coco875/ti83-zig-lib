@@ -6,7 +6,6 @@ const std = @import("std");
 pub fn build(b: *std.Build) void {
     const lib = b.addLibrary(.{
         .name = "ti83-lib",
-        .zig_lib_dir = "src",
     });
     lib.addIncludePath(.{ .path = "src" });
 }
