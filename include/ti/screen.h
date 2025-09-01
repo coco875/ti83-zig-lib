@@ -38,6 +38,10 @@ void boot_NewLine(void);
  * OS Routines
  */
 
+tiflags void os_HomeUp(void);
+tiflags void os_ClrLCD(void);
+tiflags void os_ClrLCDFull(void);
+
 /**
  * Resets the OS homescreen; accounts for split screen.
  */
