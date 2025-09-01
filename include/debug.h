@@ -16,9 +16,9 @@ extern "C" {
 #ifndef NDEBUG
 
 /** Standard debug output */
-#define dbgout ((char*)0xFB0000)
+const static char* dbgout = ((char*)0xFB0000);
 /** Standard error debug output */
-#define dbgerr ((char*)0xFC0000)
+const static char* dbgerr = ((char*)0xFC0000);
 
 /** Break on read. */
 #define DBG_WATCHPOINT_READ (1 << 0) 
@@ -38,8 +38,13 @@ extern "C" {
  * @param[in] ... Uses printf-formated specifier string.
  * @note Does not support floats unless `HAS_PRINTF = YES`.
  */
-#define dbg_printf(...) \
-sprintf(dbgout, ##__VA_ARGS__)
+static inline int dbg_printf(const char *fmt, ...) {
+    va_list args;
+    va_start(args, fmt);
+    int ret = vsprintf(dbgout, fmt, args);
+    va_end(args);
+    return ret;
+}
 
 /**
  * Used to print to the emulator console.
@@ -49,16 +54,20 @@ sprintf(dbgout, ##__VA_ARGS__)
  * @param[in] ... Uses printf-formated specifier string.
  * @note Does not support floats unless `HAS_PRINTF = YES`.
  */
-#define dbg_sprintf(out, ...) \
-sprintf(out, ##__VA_ARGS__)
+static inline int dbg_sprintf(char *out, const char *fmt, ...) {
+    va_list args;
+    va_start(args, fmt);
+    int ret = vsprintf(out, fmt, args);
+    va_end(args);
+    return ret;
+}
 
 /**
  * Clears the emulation console.
  */
-#define dbg_ClearConsole() \
-do { \
-    *(volatile unsigned char*)0xFD0000 = 1; \
-} while (0)
+static inline void dbg_ClearConsole(void) {
+    *(volatile unsigned char*)0xFD0000 = 1;
+}
 
 /**
  * Opens the emulator's debugger immediately
